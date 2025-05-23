@@ -32,3 +32,11 @@ export function getBarSize(bar: Bar, min_year: number) {
 		span: getDaysBetweenDates(bar.date_debut_validite, bar.date_fin_validite)
 	};
 }
+
+export function getMinYear(bars: Bar[]){
+	return Math.min(...bars.map(bar => new Date(bar.date_debut_validite).getFullYear()));
+}
+
+export function getMaxYear(bars: Bar[]){
+	return Math.max(...bars.map(bar => new Date(bar.date_fin_validite).getFullYear()));
+}

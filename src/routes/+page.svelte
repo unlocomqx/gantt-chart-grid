@@ -3,8 +3,9 @@
 	import Icon from '@iconify/svelte';
 
 	let { data } = $props();
-	let { years, months, quarters, bars, min_year } = data;
+	let { months, quarters, bars, min_year, max_year } = data;
 
+	const years = Array.from({ length: max_year - min_year + 1 }, (_, i) => min_year + i);
 	let view = $state<'month' | 'quarter'>('quarter');
 	let zoom = $state(36);
 </script>

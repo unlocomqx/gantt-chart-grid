@@ -5,19 +5,20 @@ export const load: PageLoad = () => {
 	return {
 		years: [2024, 2025],
 		months: [
-			'Janvier',
-			'Février',
-			'Mars',
-			'Avril',
+			'Jan',
+			'Fév',
+			'Mar',
+			'Avr',
 			'Mai',
 			'Juin',
-			'Juillet',
+			'Juil',
 			'Août',
-			'Septembre',
-			'Octobre',
-			'Novembre',
-			'Décembre'
+			'Sep',
+			'Oct',
+			'Nov',
+			'Déc'
 		],
+		quarters: ['T1', 'T2', 'T3', 'T4'],
 		bars: [
 			{
 				id_sep: 'SEP-001',

@@ -16,6 +16,16 @@ export function getMonthSize(year: number, month: number, min_year: number) {
 	};
 }
 
+export function getQuarterSize(year: number, quarter: number, min_year: number) {
+	return {
+		start: getDaysBetweenDates(min_year + '-01-01', year + '-' + (((quarter - 1) * 3) + 1) + '-02'),
+		span:
+			daysInMonth(year, quarter * 3) +
+			daysInMonth(year, (quarter - 1) * 3 + 1) +
+			daysInMonth(year, quarter * 3 + 2)
+	};
+}
+
 export function getBarSize(bar: Bar, min_year: number) {
 	return {
 		start: getDaysBetweenDates(min_year + '-01-01', bar.date_debut_validite),
